@@ -2,7 +2,8 @@ from flask_restful import Resource
 from flask import redirect, render_template, make_response
 from packages.db.Mongo_Collection_Handler import Mongo_Collection_Handler
 
-class add_user(Resource):
+
+class AddUser(Resource):
     def get(self):
         mongo_districts = Mongo_Collection_Handler('districts')
         districts = []

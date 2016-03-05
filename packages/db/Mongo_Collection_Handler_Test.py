@@ -5,9 +5,7 @@ from random import randint
 from time import localtime
 from datetime import datetime
 
-
 if __name__ == '__main__':
-
     db_col_handler_tickets = Mongo_Collection_Handler('tickets')
     db_col_handler_summaries = Mongo_Collection_Handler('summaries')
 
@@ -52,7 +50,6 @@ if __name__ == '__main__':
     # for data in db_col_handler._get_data_(query2):
     #     print data
 
-
     # db_col_handler._remove_item_({"issue_summary":"Critical Security Update for Identity Server 5.0.0"})
 
     # db_col_handler._update_data_(
@@ -81,19 +78,18 @@ if __name__ == '__main__':
     #     if ticket["issue_id"] == "STRAATSBOSBEHEERPROD-1":
     #         print ticket["project_category"]
 
-    # print db_col_handler_summaries._remove_item_({"issue_summary": "Security Patch for Apache Rampart Issue: RAMPART-269"})
+    # print db_col_handler_summaries._remove_item_(
+    #                                         {"issue_summary": "Security Patch for Apache Rampart Issue: RAMPART-269"})
     print db_col_handler_summaries._get_count_()
     # print db_col_handler_summaries._get_data_({"_id":"SKYTVNZDEV-33"})[0]["issue_summary"]
     # print db_col_handler_summaries._get_data_({"_id":"SKYTVNZDEV-33"})[0]["description"]
 
+    x = [1, 2, 3]
+    z = [1, 2, 3]
+    y = [2, 4, 5, 6]
 
-    x = [1,2,3]
-    z = [1,2,3]
-    y = [2,4,5,6]
-
-    d = {}
-    d["a"] = []
-    d["a"] = d["a"].__add__(x);
+    d = {"a": []}
+    d["a"] = d["a"].__add__(x)
     print d["a"]
 
     g = list(set(x).intersection(set(y)))

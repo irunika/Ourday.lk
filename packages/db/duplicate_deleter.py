@@ -16,12 +16,13 @@ while issues.__len__() != 0:
     issue = issues.pop()
     issue_summary = issue['issue_summary']
 
-    issues_matching_summary = db_col_handler_summaries._get_data_({'issue_summary':issue_summary})
+    issues_matching_summary = db_col_handler_summaries._get_data_({'issue_summary': issue_summary})
 
     if issues_matching_summary.__len__() > 2:
         issues_matching_summary.pop()
 
-        print 'found Duplicate : ', issues_matching_summary[0]['issue_summary'] + '  ---> ', issues_matching_summary.__len__()
+        print 'found Duplicate : ', issues_matching_summary[0]['issue_summary'] + '  ---> ', \
+            issues_matching_summary.__len__()
 
         for matching_issue in issues_matching_summary:
             db_col_handler_summaries._remove_item_({'_id':matching_issue['_id']})

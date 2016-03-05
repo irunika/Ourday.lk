@@ -3,13 +3,11 @@ from random import randint
 from time import localtime
 import sys
 
-
 '''
 Note : This is to check Mongo_Handler No use for project
 '''
 
 if __name__ == '__main__':
-
     db_handler = Mongo_Handler('localhost', 27017, 'test')
     # db_handler._delete_database_()
     #
@@ -51,6 +49,6 @@ if __name__ == '__main__':
     # db_handler._copy_collection_to('test1', 'test2')
 
     # print db_handler._get_count_()
-    print db_handler._get_count_( 'keywords',
-            {'key_list':'password'}
-        )
+    print db_handler._get_count_('keywords',
+                                 {'key_list': 'password'}
+                                 )

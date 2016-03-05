@@ -2071,7 +2071,6 @@ distric_array = [(1, 'Colombo'),
 (24, 'Monaragala')]
 
 
-
 district_cities = {}
 
 for value, district in distric_array:
@@ -2090,8 +2089,8 @@ district_col = mongo.get_database('ourday').get_collection('districts')
 
 for num in range(1,25):
     district_col.insert({
-        '_id':district_cities[num]['district'],
-        'district':district_cities[num]['district'],
-        'cities':district_cities[num]['cities']
+        '_id': district_cities[num]['district'],
+        'district': district_cities[num]['district'],
+        'cities': district_cities[num]['cities']
 
     })
