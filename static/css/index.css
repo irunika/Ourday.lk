@@ -1,0 +1,37 @@
+.   img{
+    /*-webkit-filter: blur(2px);*/
+  /*-moz-filter: blur(2px);*/
+  /*-o-filter: blur(2px);*/
+  /*-ms-filter: blur(2px);*/
+  /*filter: blur(2px);*/
+    background:
+            #7e7e7e
+            url("../images/navbar_img.jpg");
+}
+
+
+.navbar-index{
+    background: rgba(0, 0, 0, 0);
+    border: solid 5px;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-index .navbar-nav li a{
+    color: black;
+}
+
+.navbar-index .navbar-nav form{
+    color: black;
+}
+
+@media only screen and (max-width: 500px){
+    .navbar-index{
+        background: rgba(0, 0, 0, 0.89);
+        border: solid 5px;
+        border-color: rgba(0, 0, 0, 0);
+    }
+
+    .navbar-index .navbar-nav li a{
+        color: #dedede;
+    }
+}

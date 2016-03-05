@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src='{{ url_for('static',filename='jquery/jquery-2.2.1.min.js') }}'></script>
+    <script type="text/javascript" src='{{ url_for('static', filename='bootstrap/js/bootstrap.min.js' ) }}'></script>
+    <script type="text/javascript" src='{{ url_for('static', filename='js/main.js' ) }}'></script>
+
+    <link href='{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}' rel="stylesheet">
+    <link href='{{ url_for('static', filename='css/main.css') }}' rel="stylesheet">
+
+    <title>ourday</title>
+</head>
+<body>
+    {% include 'navbars/navbar_layout.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% include 'footers/footer.html' %}
+</body>
+</html>

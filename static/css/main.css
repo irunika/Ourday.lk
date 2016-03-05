@@ -1,0 +1,15 @@
+html{
+    position: relative;
+}
+
+
+
+footer{
+    position: fixed;
+    min-height: 3px;
+    /*left: 0;*/
+    /*right: 0;*/
+    width:100%;
+    background: red;
+    bottom: 0px ;
+}
