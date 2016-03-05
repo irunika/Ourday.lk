@@ -1,3 +1,86 @@
 {% extends 'layout.html' %}
 {% block content %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/add_user.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap-select-1.10.0/dist/js/bootstrap-select.min.js') }}"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-select-1.10.0/dist/css/bootstrap-select.min.css') }}">
+
+        <form class="form-horizontal">
+          <fieldset>
+            <legend>Legend</legend>
+            <div class="form-group">
+              <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+              <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+              <div class="col-lg-10">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="textArea" class="col-lg-2 control-label">Description</label>
+              <div class="col-lg-10">
+                <textarea class="form-control" rows="3" id="textArea"></textarea>
+                <span class="help-block">Add aa Description about you ir the organization in 300 characters</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="select" class="col-lg-2 control-label">Destrict</label>
+              <div class="col-lg-6">
+                <select class="form-control selectpicker" id="select-district" data-live-search="true" title="--Select District--">
+{#                    <option>--Select District--</option>#}
+                  {% for district in districts %}
+                      <option id="{{ district }}">{{ district }}</option>
+                  {% endfor %}
+                </select>
+                <br>
+              </div>
+            <div class="col-lg-4"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="select" class="col-lg-2 control-label">City</label>
+                  <div class="col-lg-6">
+                    <select class="form-control selectpicker" id="Select-city" data-live-search="true" title="--select city--">
+{#                      <option>--Select city--</option>#}
+                    </select>
+                    <br>
+                  </div>
+            <div class="col-lg-4"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="add1" class="col-lg-2 control-label">Address Line 1</label>
+              <div class="col-lg-10">
+                <input type="text" class="form-control" id="add1" placeholder="Address Line 1">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="add2" class="col-lg-2 control-label">Address Line 2</label>
+              <div class="col-lg-10">
+                <input type="text" class="form-control" id="add2" placeholder="Address Line 2">
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label for="add3" class="col-lg-2 control-label">Address Line 3</label>
+              <div class="col-lg-10">
+                <input type="text" class="form-control" id="add3" placeholder="Address Line 3">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Cancel</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
 {% endblock %}
