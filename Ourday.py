@@ -1,13 +1,14 @@
 __author__ = 'Irunika'
 
-from flask_restful import Api
 import os
-from flask import Flask
 
-from restful_services.Index import *
-from restful_services.AddUser import *
-from restful_services.SendCities import *
+from flask import Flask
+from flask_restful import Api
 from restful_services.Authentication import *
+from restful_services.Index import *
+from restful_services.SendCities import *
+
+from restful_services.APIs.AddUser import *
 
 app = Flask(__name__)
 api = Api(app)

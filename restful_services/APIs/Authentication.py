@@ -1,4 +1,4 @@
-from common.Constants import *
+from restful_services.common.Constants import *
 from rauth import OAuth2Service
 from flask import request, redirect, session
 from flask_restful import Resource
