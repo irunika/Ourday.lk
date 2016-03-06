@@ -9,6 +9,7 @@ from restful_services.AddUser import *
 from restful_services.SendCities import *
 
 
+
 app = Flask(__name__)
 api = Api(app)
 app.secret_key = os.urandom(15)
