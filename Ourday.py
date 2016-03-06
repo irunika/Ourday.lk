@@ -4,9 +4,9 @@ import os
 
 from flask import Flask
 from flask_restful import Api
-from restful_services.Authentication import *
-from restful_services.Index import *
-from restful_services.SendCities import *
+from restful_services.APIs.Authentication import *
+from restful_services.APIs.Index import *
+from restful_services.APIs.SendCities import *
 
 from restful_services.APIs.AddUser import *
 
