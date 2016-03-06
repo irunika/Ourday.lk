@@ -1,15 +1,17 @@
-html{
+html, body{
     position: relative;
 }
 
-
-
 footer{
-    position: fixed;
+    position: absolute;
     min-height: 3px;
     /*left: 0;*/
     /*right: 0;*/
     width:100%;
     background: red;
-    bottom: 0px ;
+    bottom: 0;
+}
+
+#content{
+    padding-bottom: 50px;
 }
