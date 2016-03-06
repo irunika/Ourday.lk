@@ -9,6 +9,8 @@ class AddUser(Resource):
         districts = []
         for district in mongo_districts._get_data_({}):
             districts.append(district['_id'])
+
+        districts = sorted(districts, key = lambda x:x, reverse=False)
         return make_response(
             render_template('register_user.html', districts=districts)
         )

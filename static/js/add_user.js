@@ -12,7 +12,10 @@ $(document).ready(function(){
      * THis method is called when cities need to be loaded according to the need of district
      */
     $('#select-district').change(function(){
-        //alert($('#select-district option:selected').text());
+
+        $('#Select-city').attr('disabled', true);
+        $('#cities-loading-gif').fadeIn();
+
         $.ajax({
             type:'GET',
             dataType:'json',
@@ -20,6 +23,7 @@ $(document).ready(function(){
             url:'/get_cities'
         }).done(function(response){
             console.log(response['cities'])
+            $('#Select-city').attr('disabled', false);
             $('#Select-city').empty();
             for(var i=0; i<response['cities'].length ;i++ ){
                 $('#Select-city').append(
@@ -27,6 +31,10 @@ $(document).ready(function(){
                 );
             }
             $('#Select-city').selectpicker('refresh');
+            $('#cities-loading-gif').slideUp();
+
+
+
         }).fail(function(response){
 
         })

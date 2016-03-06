@@ -2,17 +2,17 @@ __author__ = 'Irunika'
 
 from flask_restful import Resource
 from flask import redirect, render_template, make_response, request, jsonify
+
 from packages.db.Mongo_Collection_Handler import Mongo_Collection_Handler
 
-
-class SendCities(Resource):
-    @staticmethod
-    def get():
-        district = request.args['district']
+class Send_Cities(Resource):
+    def get(self):
+        district =  request.args['district']
         mongo_districts = Mongo_Collection_Handler('districts')
         print district
+        cities = sorted(mongo_districts._get_data_({'_id':district})[0]['cities'], key=lambda x:x, reverse=False)
         return make_response(
             jsonify(
-                    {'cities': mongo_districts._get_data_({'_id': district})[0]['cities']}
+                    {'cities':cities}
             )
         )
