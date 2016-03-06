@@ -17,7 +17,7 @@ app.secret_key = os.urandom(15)
 api.add_resource(Index, '/', endpoint='/')
 api.add_resource(Ourday, '/ourday', endpoint='/ourday')
 api.add_resource(AddUser, '/register_user', endpoint='/register_user')
-api.add_resource(SendCities, '/get_cities', endpoint='/get_cities')
+api.add_resource(Send_Cities, '/get_cities', endpoint='/get_cities')
 api.add_resource(facebookLogin, '/authorize/facebook', endpoint='/authorize/facebook')
 api.add_resource(facebookCallBack, '/callback/facebook', endpoint='/callback/facebook')
 
